@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 App", "00 App", "{5A9EE3F6-735B-4CC2-BEEC-0C6B4151E213}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Application", "01 Application", "{4428858F-D920-4CFF-B250-C7319C12487B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Domain", "03 Domain", "{C89809A5-74DF-4BAF-A9C3-2C2BB87E92A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Infrastructure", "04 Infrastructure", "{9A12E809-5678-465A-9092-6CC72D9C1B55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 Repository", "4.1 Repository", "{062BF44F-9252-45F9-96F0-3D740C8D2A19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 Ioc", "4.2 Ioc", "{C995F87B-47F6-4131-AAFC-86949B930EAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.3 CustomException", "4.3 CustomException", "{EC83C742-2994-4071-806A-012400447FF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaDemo.Infrastructure.CustomException", "LojaDemo.Infrastructure.CustomException\LojaDemo.Infrastructure.CustomException.csproj", "{120293B3-DE7B-4A37-9619-13CFD91A5BBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaDemo.Infrastructure.Ioc", "LojaDemo.Infrastructure.Ioc\LojaDemo.Infrastructure.Ioc.csproj", "{FF06B4F2-B3F4-444E-BD2E-7DBAB3CC24E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaDemo.Infrastructure.Repository", "LojaDemo.Infrastructure.Repository\LojaDemo.Infrastructure.Repository.csproj", "{BC3CE0BB-6B61-4645-BC78-CCC2D2BA90CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaDemo.Domain", "LojaDemo.Domain\LojaDemo.Domain.csproj", "{58B3B9F3-29FF-4356-80CD-EE514818D664}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaDemo.Application", "LojaDemo.Application\LojaDemo.Application.csproj", "{4AC5B858-AC51-4A80-B096-6F0AD9517979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaDemo.RestApi", "LojaDemo.RestApi\LojaDemo.RestApi.csproj", "{25F7922F-532E-44F1-AB70-9DF61641EA37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{120293B3-DE7B-4A37-9619-13CFD91A5BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{120293B3-DE7B-4A37-9619-13CFD91A5BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{120293B3-DE7B-4A37-9619-13CFD91A5BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{120293B3-DE7B-4A37-9619-13CFD91A5BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF06B4F2-B3F4-444E-BD2E-7DBAB3CC24E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF06B4F2-B3F4-444E-BD2E-7DBAB3CC24E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF06B4F2-B3F4-444E-BD2E-7DBAB3CC24E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF06B4F2-B3F4-444E-BD2E-7DBAB3CC24E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC3CE0BB-6B61-4645-BC78-CCC2D2BA90CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3CE0BB-6B61-4645-BC78-CCC2D2BA90CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3CE0BB-6B61-4645-BC78-CCC2D2BA90CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3CE0BB-6B61-4645-BC78-CCC2D2BA90CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58B3B9F3-29FF-4356-80CD-EE514818D664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58B3B9F3-29FF-4356-80CD-EE514818D664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58B3B9F3-29FF-4356-80CD-EE514818D664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58B3B9F3-29FF-4356-80CD-EE514818D664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC5B858-AC51-4A80-B096-6F0AD9517979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC5B858-AC51-4A80-B096-6F0AD9517979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC5B858-AC51-4A80-B096-6F0AD9517979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC5B858-AC51-4A80-B096-6F0AD9517979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F7922F-532E-44F1-AB70-9DF61641EA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F7922F-532E-44F1-AB70-9DF61641EA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F7922F-532E-44F1-AB70-9DF61641EA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F7922F-532E-44F1-AB70-9DF61641EA37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{062BF44F-9252-45F9-96F0-3D740C8D2A19} = {9A12E809-5678-465A-9092-6CC72D9C1B55}
+		{C995F87B-47F6-4131-AAFC-86949B930EAA} = {9A12E809-5678-465A-9092-6CC72D9C1B55}
+		{EC83C742-2994-4071-806A-012400447FF3} = {9A12E809-5678-465A-9092-6CC72D9C1B55}
+		{120293B3-DE7B-4A37-9619-13CFD91A5BBD} = {EC83C742-2994-4071-806A-012400447FF3}
+		{FF06B4F2-B3F4-444E-BD2E-7DBAB3CC24E9} = {C995F87B-47F6-4131-AAFC-86949B930EAA}
+		{BC3CE0BB-6B61-4645-BC78-CCC2D2BA90CF} = {062BF44F-9252-45F9-96F0-3D740C8D2A19}
+		{58B3B9F3-29FF-4356-80CD-EE514818D664} = {C89809A5-74DF-4BAF-A9C3-2C2BB87E92A5}
+		{4AC5B858-AC51-4A80-B096-6F0AD9517979} = {4428858F-D920-4CFF-B250-C7319C12487B}
+		{25F7922F-532E-44F1-AB70-9DF61641EA37} = {5A9EE3F6-735B-4CC2-BEEC-0C6B4151E213}
+	EndGlobalSection
+EndGlobal
