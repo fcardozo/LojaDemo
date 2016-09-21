@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaDemo.App", "LojaDemo.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaDemo.Application.Test", "LojaDemo.Application.Test\LojaDemo.Application.Test.csproj", "{483BAE14-8B77-41AB-B257-A2D90B1EEF86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaDemo.Dto", "LojaDemo.Dto\LojaDemo.Dto.csproj", "{1F848ACB-ED34-4F77-969F-3E90A29784C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{483BAE14-8B77-41AB-B257-A2D90B1EEF86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{483BAE14-8B77-41AB-B257-A2D90B1EEF86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{483BAE14-8B77-41AB-B257-A2D90B1EEF86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F848ACB-ED34-4F77-969F-3E90A29784C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F848ACB-ED34-4F77-969F-3E90A29784C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F848ACB-ED34-4F77-969F-3E90A29784C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F848ACB-ED34-4F77-969F-3E90A29784C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,5 +93,6 @@ Global
 		{25F7922F-532E-44F1-AB70-9DF61641EA37} = {5A9EE3F6-735B-4CC2-BEEC-0C6B4151E213}
 		{6F785647-147E-4D98-8DE9-80307DBC67F2} = {5A9EE3F6-735B-4CC2-BEEC-0C6B4151E213}
 		{483BAE14-8B77-41AB-B257-A2D90B1EEF86} = {4428858F-D920-4CFF-B250-C7319C12487B}
+		{1F848ACB-ED34-4F77-969F-3E90A29784C0} = {4428858F-D920-4CFF-B250-C7319C12487B}
 	EndGlobalSection
 EndGlobal

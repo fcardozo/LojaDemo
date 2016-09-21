@@ -1,4 +1,5 @@
 ﻿using LojaDemo.Domain;
+using LojaDemo.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,6 @@ namespace LojaDemo.Application.UserApplication
         /// Execute login of the user
         /// </summary>
         /// <param name="user">User to login</param>
-        void Login(User user);
+        UserDto Login(UserDto user);
     }
 }

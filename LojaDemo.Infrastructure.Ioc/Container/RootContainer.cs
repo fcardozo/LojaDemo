@@ -16,5 +16,10 @@ namespace LojaDemo.Infrastructure.Ioc.Container
             container.RegisterType<IUserRepository, Repository.UserRepository>(new TransientLifetimeManager());
 
         }
+
+        public override void ConfigureFakeContainer(IUnityContainer container)
+        {
+            
+        }
     }
 }

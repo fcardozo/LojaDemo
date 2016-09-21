@@ -7,6 +7,14 @@
     {
       "Key": "UserWithoutPassException",
       "value": "The user need to has a password."
+    },
+    {
+      "Key": "UserNoExistException",
+      "value": "The user not exist."
+    },
+    {
+      "Key": "UserOrPassInstCorrectException",
+      "value": "User or password is invalid."
     }
   ]
 }

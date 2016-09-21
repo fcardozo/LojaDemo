@@ -48,6 +48,7 @@
     <Compile Include="FactoryExceptionMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextOfCustomException\ListTextException.cs" />
+    <Compile Include="UserException\UserOrPassInstCorrectException.cs" />
     <Compile Include="UserException\UserWithoutLoginException.cs" />
     <Compile Include="UserException\UserWithoutPassException.cs" />
   </ItemGroup>

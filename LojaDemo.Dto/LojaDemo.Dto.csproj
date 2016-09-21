@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4AC5B858-AC51-4A80-B096-6F0AD9517979}</ProjectGuid>
+    <ProjectGuid>{1F848ACB-ED34-4F77-969F-3E90A29784C0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LojaDemo.Application</RootNamespace>
-    <AssemblyName>LojaDemo.Application</AssemblyName>
+    <RootNamespace>LojaDemo.Dto</RootNamespace>
+    <AssemblyName>LojaDemo.Dto</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,13 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=5.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.5.1.1\lib\net45\AutoMapper.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="PVPSolutions.Framework">
-      <HintPath>..\Dependencia\PVPFramework\PVPSolutions.Framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,27 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\IUserRepository.cs" />
-    <Compile Include="UserApplication\IUserApplicationService.cs" />
-    <Compile Include="UserApplication\UserApplicationService.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LojaDemo.Domain\LojaDemo.Domain.csproj">
-      <Project>{58b3b9f3-29ff-4356-80cd-ee514818d664}</Project>
-      <Name>LojaDemo.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LojaDemo.Dto\LojaDemo.Dto.csproj">
-      <Project>{1f848acb-ed34-4f77-969f-3e90a29784c0}</Project>
-      <Name>LojaDemo.Dto</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LojaDemo.Infrastructure.CustomException\LojaDemo.Infrastructure.CustomException.csproj">
-      <Project>{120293B3-DE7B-4A37-9619-13CFD91A5BBD}</Project>
-      <Name>LojaDemo.Infrastructure.CustomException</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

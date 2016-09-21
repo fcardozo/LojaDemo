@@ -1,16 +1,12 @@
-﻿using LojaDemo.Infrastructure.CustomException.UserException;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LojaDemo.Domain
+namespace LojaDemo.Dto
 {
-    /// <summary>
-    /// The user of the store
-    /// </summary>
-    public class User
+    public class UserDto
     {
         /// <summary>
         /// Nem of the user
@@ -26,5 +22,10 @@ namespace LojaDemo.Domain
         /// Password of the user
         /// </summary>
         public string Password { get; set; }
+
+        /// <summary>
+        /// Token for user Authenticated
+        /// </summary>
+        public string TokenValid { get; set; }
     }
 }
