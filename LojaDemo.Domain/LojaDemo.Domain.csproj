@@ -41,6 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LojaDemo.Infrastructure.CustomException\LojaDemo.Infrastructure.CustomException.csproj">
+      <Project>{120293b3-de7b-4a37-9619-13cfd91a5bbd}</Project>
+      <Name>LojaDemo.Infrastructure.CustomException</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,12 @@
+﻿{
+  "ListOfException": [
+    {
+      "Key": "UserWithoutLoginException",
+      "value": "The user need to has a login."
+    },
+    {
+      "Key": "UserWithoutPassException",
+      "value": "The user need to has a password."
+    }
+  ]
+}
