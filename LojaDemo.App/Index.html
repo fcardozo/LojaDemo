@@ -1,10 +1,117 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="LojaDemoApp">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- CSS References -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-combobox.css" rel="stylesheet" />
+
+    <!-- JS Frameworks References -->
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/bootstrap-combobox.js"></script>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/angular-cookies.min.js"></script>
+
+
+    <script src="JSSource/Application/LojaDemoApp.js"></script>
+    <script src="JSSource/Controller/IndexController.js"></script>
+    <script src="JSSource/Controller/HomeController.js"></script>
+    <script src="JSSource/Controller/YourOrdersController.js"></script>
+
+    <script src="JSSource/Services/UserService.js"></script>
+
+
     <title></title>
-	<meta charset="utf-8" />
 </head>
-<body>
-    <h1>Teste Index</h1>
+<body ng-controller="IndexController">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    LojaDemo Shop
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <button type="button" class="btn btn-default navbar-btn" ng-if="!IsAuth" data-toggle="modal" data-target="#modalLogin">Sign in</button>
+                <ul class="nav navbar-nav navbar-right" ng-if="IsAuth">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{UserAuth.Name}}<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#/YourOrders">Your Orders</a></li>
+                            <li><a href="#" ng-click="Logout()">Sign out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-default navbar-btn navbar-right" ng-click="OpenCart()">
+                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart <span class="badge">0</span>
+                </button>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!--<div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Brand" src="Content/Images/shopcar.png" height="20" width="25">
+                    </a>
+                    <p class="navbar-text">LojaDemo Shop</p>
+                    <p class="navbar-text navbar-right" ng-if="IsAuth">Signed in as <a href="#" class="navbar-link">{{UserAuth.Name}}</a></p>
+                </div>
+            </div>
+        </nav>
+    </div>-->
+
+    <div class="container-fluid" ng-view>
+    </div>
+
+    <div id="modalLogin" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Sign in</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="navbar-fixed-top NotifyText">
+                        <div class="text-center" ng-show="ErroLogin.MostraTextoErro">
+                            <span class="label label-danger">{{ErroLogin.MenssagemErro}}</span>
+                        </div>
+                        <div class="text-center" ng-show="PaginaCarregando">
+                            <div class="text-center"><span class="label label-warning">Autenticando...</span></div>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="form-group small">
+                            <label for="exampleInputEmail1">Login</label>
+                            <input type="text" class="form-control" id="inputLogin" placeholder="Login of user" ng-model="LoginRequest.Login">
+                        </div>
+                        <div class="form-group small" ">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="LoginRequest.Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary" ng-click="ExecuteLogin()">Login</button>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 </body>
 </html>

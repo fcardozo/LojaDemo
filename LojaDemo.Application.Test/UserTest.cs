@@ -4,6 +4,7 @@ using LojaDemo.Infrastructure.CustomException.UserException;
 using LojaDemo.Application.UserApplication;
 using LojaDemo.Infrastructure.Ioc;
 using LojaDemo.Dto;
+using LojaDemo.Dto.User;
 
 namespace LojaDemo.Application.Test
 {
@@ -15,15 +16,12 @@ namespace LojaDemo.Application.Test
         [TestMethod]
         public void VerifyUserwithoutLogin()
         {
-            UserDto user = new UserDto();
+            LoginRequest loginRequest = new LoginRequest();
 
             try
             {
-                userApplicationService.Login(user);
-            }
-            catch (UserOrPassInstCorrectException)
-            {
-                Assert.IsTrue(true);
+                var response = userApplicationService.Login(loginRequest);
+                Assert.IsTrue(!response.IsAuthenticated && response.MessageError.Equals(new UserOrPassInstCorrectException().Message));
             }
             catch (Exception ex)
             {
@@ -34,16 +32,13 @@ namespace LojaDemo.Application.Test
         [TestMethod]
         public void VerifyUserwithoutPass()
         {
-            UserDto user = new UserDto();
-            user.Loign = "fcardozo";
+            LoginRequest loginRequest = new LoginRequest();
+            loginRequest.Login = "fcardozo";
 
             try
             {
-                userApplicationService.Login(user);
-            }
-            catch (UserOrPassInstCorrectException)
-            {
-                Assert.IsTrue(true);
+                var response = userApplicationService.Login(loginRequest);
+                Assert.IsTrue(!response.IsAuthenticated && response.MessageError.Equals(new UserOrPassInstCorrectException().Message));
             }
             catch (Exception ex)
             {
@@ -56,12 +51,9 @@ namespace LojaDemo.Application.Test
         {
             try
             {
-                UserDto user = new UserDto() { Loign = "userNoExist", Password = "errorPass" };
-                userApplicationService.Login(user);
-            }
-            catch (UserOrPassInstCorrectException)
-            {
-                Assert.IsTrue(true);
+                LoginRequest loginRequest = new LoginRequest() { Login = "userNoExist", Password = "errorPass" };
+                var response = userApplicationService.Login(loginRequest);
+                Assert.IsTrue(!response.IsAuthenticated && response.MessageError.Equals(new UserOrPassInstCorrectException().Message));
             }
             catch (Exception ex)
             {
@@ -74,12 +66,9 @@ namespace LojaDemo.Application.Test
         {
             try
             {
-                UserDto user = new UserDto() { Loign = "fcardozo", Password = "errorPass" };
-                userApplicationService.Login(user);
-            }
-            catch (UserOrPassInstCorrectException)
-            {
-                Assert.IsTrue(true);
+                LoginRequest loginRequest = new LoginRequest() { Login = "fcardozo", Password = "errorPass" };
+                var response = userApplicationService.Login(loginRequest);
+                Assert.IsTrue(!response.IsAuthenticated && response.MessageError.Equals(new UserOrPassInstCorrectException().Message));
             }
             catch (Exception ex)
             {
@@ -92,10 +81,11 @@ namespace LojaDemo.Application.Test
         {
             try
             {
-                UserDto user = new UserDto() { Loign = "fcardozo", Password = "loja@123" };
-                user = userApplicationService.Login(user);
+                LoginRequest loginRequest = new LoginRequest() { Login = "fcardozo", Password = "loja@123" };
 
-                Assert.IsTrue(!string.IsNullOrEmpty(user.TokenValid));
+                var response = userApplicationService.Login(loginRequest);
+
+                Assert.IsTrue(!string.IsNullOrEmpty(response.UserAuth.TokenValid) && response.IsAuthenticated);
             }
             catch (Exception ex)
             {

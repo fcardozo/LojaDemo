@@ -488,5 +488,22 @@
             <param name="id">ID of the product need to consult.</param>
             <returns>Return product wthi ID found.</returns>
         </member>
+        <member name="T:LojaDemo.RestApi.Controllers.UserController">
+            <summary>
+            User's API
+            </summary>
+        </member>
+        <member name="F:LojaDemo.RestApi.Controllers.UserController.userApplicationService">
+            <summary>
+            Variable of user's application service
+            </summary>
+        </member>
+        <member name="M:LojaDemo.RestApi.Controllers.UserController.Login(LojaDemo.Dto.User.LoginRequest)">
+            <summary>
+            Execute login of user.
+            </summary>
+            <param name="loginRequest">Request to execute login.</param>
+            <returns>Authenticated user</returns>
+        </member>
     </members>
 </doc>

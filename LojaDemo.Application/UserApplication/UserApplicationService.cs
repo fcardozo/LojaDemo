@@ -8,6 +8,7 @@ using LojaDemo.Application.Repository;
 using LojaDemo.Infrastructure.CustomException.UserException;
 using LojaDemo.Dto;
 using AutoMapper;
+using LojaDemo.Dto.User;
 
 namespace LojaDemo.Application.UserApplication
 {
@@ -49,25 +50,38 @@ namespace LojaDemo.Application.UserApplication
         /// <see cref="IUserApplicationService.Login(User)"/>
         /// </summary>
         /// <param name="user"><see cref="IUserApplicationService.Login(User)"/></param>
-        public UserDto Login(UserDto user)
+        public LoginResponse Login(LoginRequest loginRequest)
         {
-            if (string.IsNullOrEmpty(user.Loign) || string.IsNullOrEmpty(user.Password))
-                throw new UserOrPassInstCorrectException();
+            LoginResponse response = new LoginResponse();
 
-            /// Get user from DataBase
-            User userEntity = _userRepository.Get(p => p.Loign.ToLower().Equals(user.Loign.ToLower())).FirstOrDefault();
+            try
+            {
+                if (string.IsNullOrEmpty(loginRequest.Login) || string.IsNullOrEmpty(loginRequest.Password))
+                    throw new UserOrPassInstCorrectException();
 
-            /// Verify if exist or password is invalid.
-            if (userEntity == null || !userEntity.Password.Equals(user.Password))
-                throw new UserOrPassInstCorrectException();
+                /// Get user from DataBase
+                User userEntity = _userRepository.Get(p => p.Loign.ToLower().Equals(loginRequest.Login.ToLower())).FirstOrDefault();
 
-            /// Map UserEntity to UserDto
-            user = _mapper.Map<User, UserDto>(userEntity);
+                /// Verify if exist or password is invalid.
+                if (userEntity == null || !userEntity.Password.Equals(loginRequest.Password))
+                    throw new UserOrPassInstCorrectException();
 
-            /// Create access token 
-            user.TokenValid = Convert.ToBase64String(Encoding.GetEncoding("ISO-8859-1").GetBytes(string.Concat(user.Loign, user.Password)));
+                /// Map UserEntity to UserDto
+                UserDto userReturn = _mapper.Map<User, UserDto>(userEntity);
 
-            return user;
+                /// Create access token 
+                userReturn.TokenValid = Convert.ToBase64String(Encoding.GetEncoding("ISO-8859-1").GetBytes(string.Concat(userEntity.Loign, userEntity.Password)));
+
+                response.UserAuth = userReturn;
+                response.IsAuthenticated = true;
+            }
+            catch (UserOrPassInstCorrectException)
+            {
+                response.IsAuthenticated = false;
+                response.MessageError = new UserOrPassInstCorrectException().Message;
+            }
+
+            return response;
         }
 
         #endregion

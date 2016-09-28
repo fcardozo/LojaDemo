@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LojaDemo.Dto</name>
+    </assembly>
+    <members>
+        <member name="T:LojaDemo.Dto.User.LoginRequest">
+            <summary>
+            The object to request login on application
+            </summary>
+        </member>
+        <member name="P:LojaDemo.Dto.User.LoginRequest.Login">
+            <summary>
+            Login of the user
+            </summary>
+        </member>
+        <member name="P:LojaDemo.Dto.User.LoginRequest.Password">
+            <summary>
+            Password of the user
+            </summary>
+        </member>
+        <member name="T:LojaDemo.Dto.User.LoginResponse">
+            <summary>
+            Login's response
+            </summary>
+        </member>
+        <member name="P:LojaDemo.Dto.User.LoginResponse.UserAuth">
+            <summary>
+            User informations
+            </summary>
+        </member>
+        <member name="P:LojaDemo.Dto.User.LoginResponse.IsAuthenticated">
+            <summary>
+            Flag if user is authenticated 
+            </summary>
+        </member>
+        <member name="P:LojaDemo.Dto.User.LoginResponse.MessageError">
+            <summary>
+            Message of error cause ocurrer
+            </summary>
+        </member>
+        <member name="T:LojaDemo.Dto.User.UserDto">
+            <summary>
+            User's Data transfer object
+            </summary>
+        </member>
+        <member name="P:LojaDemo.Dto.User.UserDto.Name">
+            <summary>
+            Nem of the user
+            </summary>
+        </member>
+        <member name="P:LojaDemo.Dto.User.UserDto.Loign">
+            <summary>
+            Login of the user
+            </summary>
+        </member>
+        <member name="P:LojaDemo.Dto.User.UserDto.TokenValid">
+            <summary>
+            Token for user Authenticated
+            </summary>
+        </member>
+    </members>
+</doc>

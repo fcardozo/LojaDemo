@@ -94,10 +94,22 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-combobox.css" />
+    <Content Include="Content\Images\shopcar.png" />
+    <Content Include="HtmlSource\Home\Cart.html" />
+    <Content Include="HtmlSource\Home\Home.html" />
+    <Content Include="HtmlSource\User\YourOrders.html" />
+    <Content Include="JSSource\Application\LojaDemoApp.js" />
+    <Content Include="JSSource\Controller\CartController.js" />
+    <Content Include="JSSource\Controller\HomeController.js" />
+    <Content Include="JSSource\Controller\IndexController.js" />
+    <Content Include="JSSource\Controller\YourOrdersController.js" />
+    <Content Include="JSSource\Services\UserService.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="scripts\bootstrap-combobox.js" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -918,6 +930,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

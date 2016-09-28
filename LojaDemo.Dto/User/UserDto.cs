@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LojaDemo.Dto
+namespace LojaDemo.Dto.User
 {
+    /// <summary>
+    /// User's Data transfer object
+    /// </summary>
     public class UserDto
     {
         /// <summary>
@@ -17,11 +20,6 @@ namespace LojaDemo.Dto
         /// Login of the user
         /// </summary>
         public string Loign { get; set; }
-
-        /// <summary>
-        /// Password of the user
-        /// </summary>
-        public string Password { get; set; }
 
         /// <summary>
         /// Token for user Authenticated
