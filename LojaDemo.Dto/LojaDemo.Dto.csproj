@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category\CategoryDto.cs" />
+    <Compile Include="Category\CategoryItemDto.cs" />
+    <Compile Include="Category\GetAllCategoryResponse.cs" />
     <Compile Include="User\LoginRequest.cs" />
     <Compile Include="User\LoginResponse.cs" />
     <Compile Include="User\UserDto.cs" />

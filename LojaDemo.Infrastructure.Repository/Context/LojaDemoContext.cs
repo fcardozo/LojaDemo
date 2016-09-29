@@ -28,6 +28,8 @@ namespace LojaDemo.Infrastructure.Repository.Context
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Configurations.Add(new UserMap());
+            modelBuilder.Configurations.Add(new CategoryMap());
+            modelBuilder.Configurations.Add(new ProductMap());
         }
     }
 }

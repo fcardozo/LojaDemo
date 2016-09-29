@@ -25,7 +25,7 @@
     <script src="JSSource/Controller/YourOrdersController.js"></script>
 
     <script src="JSSource/Services/UserService.js"></script>
-
+    <script src="JSSource/Services/CategoryService.js"></script>
 
     <title></title>
 </head>
@@ -48,40 +48,31 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <button type="button" class="btn btn-default navbar-btn" ng-if="!IsAuth" data-toggle="modal" data-target="#modalLogin">Sign in</button>
-                <ul class="nav navbar-nav navbar-right" ng-if="IsAuth">
-                    <li class="dropdown">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown" ng-if="IsAuth">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{UserAuth.Name}}<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#/YourOrders">Your Orders</a></li>
                             <li><a href="#" ng-click="Logout()">Sign out</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <button type="button" class="btn btn-default navbar-btn" ng-if="!IsAuth" data-toggle="modal" data-target="#modalLogin">Sign in</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-default navbar-btn" ng-click="OpenCart()">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart <span class="badge">{{CartCount}}</span>
+                        </button>
+                    </li>
                 </ul>
-                <button type="button" class="btn btn-default navbar-btn navbar-right" ng-click="OpenCart()">
-                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart <span class="badge">0</span>
-                </button>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
-    <!--<div>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
-                        <img alt="Brand" src="Content/Images/shopcar.png" height="20" width="25">
-                    </a>
-                    <p class="navbar-text">LojaDemo Shop</p>
-                    <p class="navbar-text navbar-right" ng-if="IsAuth">Signed in as <a href="#" class="navbar-link">{{UserAuth.Name}}</a></p>
-                </div>
-            </div>
-        </nav>
-    </div>-->
-
     <div class="container-fluid" ng-view>
     </div>
 
+    <!-- Login's Modal -->
     <div id="modalLogin" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
@@ -112,6 +103,6 @@
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+    </div>  <!-- Login's Modal -->
 </body>
 </html>

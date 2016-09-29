@@ -481,6 +481,22 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:LojaDemo.RestApi.Controllers.CategoryController">
+            <summary>
+            Category's API
+            </summary>
+        </member>
+        <member name="F:LojaDemo.RestApi.Controllers.CategoryController._categoryApplicationService">
+            <summary>
+            Variable of category's application service
+            </summary>
+        </member>
+        <member name="M:LojaDemo.RestApi.Controllers.CategoryController.GetAllCategoryForList">
+            <summary>
+            Get all of category for build a list
+            </summary>
+            <returns>Return Response with List of category </returns>
+        </member>
         <member name="M:LojaDemo.RestApi.Controllers.ProductController.GetById(System.String)">
             <summary>
             Get the project by ID.

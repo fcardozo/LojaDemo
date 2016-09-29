@@ -1,4 +1,5 @@
 ﻿using Infrastructure.CrossCutting.IoC.Core;
+using LojaDemo.Application.CategoryApplication;
 using LojaDemo.Application.UserApplication;
 using LojaDemo.Infrastructure.Ioc.Container;
 using System;
@@ -22,9 +23,18 @@ namespace LojaDemo.Infrastructure.Ioc
         /// Create instance of UserApplicationService
         /// </summary>
         /// <returns>User's Application service</returns>
-        public static IUserApplicationService GetInstanceIUserRepository()
+        public static IUserApplicationService GetInstanceIUserApplicationServie()
         {
             return IoCFactory.Instance.CurrentContainer.Resolve<IUserApplicationService>();
+        }
+
+        /// <summary>
+        /// Create instance of CategoryApplicationService
+        /// </summary>
+        /// <returns>Category's Application service</returns>
+        public static ICategoryApplicationService GetInstanceICategoryApplicationServie()
+        {
+            return IoCFactory.Instance.CurrentContainer.Resolve<ICategoryApplicationService>();
         }
 
         #endregion

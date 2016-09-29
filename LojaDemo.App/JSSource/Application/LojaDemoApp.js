@@ -33,6 +33,7 @@
             // keep user logged in after page refresh
 
             $rootScope.UserAuth = $cookies.getObject('loginCredential');
+            $rootScope.CartItens = $cookies.getObject('CartItens');
 
             if ($rootScope.UserAuth) {
                 $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.UserAuth.TokenValid; // jshint ignore:line

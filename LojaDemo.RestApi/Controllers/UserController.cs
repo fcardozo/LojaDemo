@@ -29,7 +29,7 @@ namespace LojaDemo.RestApi.Controllers
         [HttpPost()]
         public LoginResponse Login(LoginRequest loginRequest)
         {
-            userApplicationService = IocFactory.GetInstanceIUserRepository();
+            userApplicationService = IocFactory.GetInstanceIUserApplicationServie();
             return userApplicationService.Login(loginRequest);
         }
     }

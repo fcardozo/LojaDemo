@@ -11,7 +11,7 @@ namespace LojaDemo.Application.Test
     [TestClass]
     public class UserTest
     {
-        IUserApplicationService userApplicationService = IocFactory.GetInstanceIUserRepository();
+        IUserApplicationService userApplicationService = IocFactory.GetInstanceIUserApplicationServie();
 
         [TestMethod]
         public void VerifyUserwithoutLogin()

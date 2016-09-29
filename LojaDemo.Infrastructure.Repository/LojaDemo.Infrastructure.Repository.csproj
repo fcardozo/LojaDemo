@@ -59,13 +59,20 @@
   <ItemGroup>
     <Compile Include="Context\Helper.cs" />
     <Compile Include="Context\LojaDemoContext.cs" />
+    <Compile Include="Map\CategoryMap.cs" />
+    <Compile Include="Map\ProductMap.cs" />
     <Compile Include="Map\UserMap.cs" />
     <Compile Include="Migrations\201609201858099_AddUser.cs" />
     <Compile Include="Migrations\201609201858099_AddUser.Designer.cs">
       <DependentUpon>201609201858099_AddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609281901481_AddCategoryAndProducts.cs" />
+    <Compile Include="Migrations\201609281901481_AddCategoryAndProducts.Designer.cs">
+      <DependentUpon>201609281901481_AddCategoryAndProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +92,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201609201858099_AddUser.resx">
       <DependentUpon>201609201858099_AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609281901481_AddCategoryAndProducts.resx">
+      <DependentUpon>201609281901481_AddCategoryAndProducts.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

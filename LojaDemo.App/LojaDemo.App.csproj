@@ -104,6 +104,7 @@
     <Content Include="JSSource\Controller\HomeController.js" />
     <Content Include="JSSource\Controller\IndexController.js" />
     <Content Include="JSSource\Controller\YourOrdersController.js" />
+    <Content Include="JSSource\Services\CategoryService.js" />
     <Content Include="JSSource\Services\UserService.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">

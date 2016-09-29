@@ -13,7 +13,15 @@
             $scope.IsAuth = true;
         });
 
+        /// Get cookies
         $scope.UserAuth = $rootScope.UserAuth;
+        $scope.CartItens = $rootScope.CartItens;
+
+        if ($scope.CartItens == undefined)
+            $scope.CartItens = [];
+
+        $scope.CartCount = $scope.CartItens.length;
+
         $scope.IsAuth = $scope.UserAuth != undefined;
 
         $scope.PaginaCarregando = false;
@@ -91,8 +99,7 @@
             $scope.IsAuth = false;
         };
 
-        $scope.OpenCart = function ()
-        {
+        $scope.OpenCart = function () {
             $location.path('/Cart');
             window.location = '#/Cart';
         }

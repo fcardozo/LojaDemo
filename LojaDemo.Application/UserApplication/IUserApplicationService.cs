@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace LojaDemo.Application.UserApplication
 {
+    /// <summary>
+    /// User's application service
+    /// </summary>
     public interface IUserApplicationService
     {
         /// <summary>

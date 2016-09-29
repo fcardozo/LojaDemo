@@ -4,6 +4,31 @@
         <name>LojaDemo.Dto</name>
     </assembly>
     <members>
+        <member name="T:LojaDemo.Dto.Category.CategoryItemDto">
+            <summary>
+            Object of category represents ComboBox
+            </summary>
+        </member>
+        <member name="P:LojaDemo.Dto.Category.CategoryItemDto.Id">
+            <summary>
+            Category's ID
+            </summary>
+        </member>
+        <member name="P:LojaDemo.Dto.Category.CategoryItemDto.Name">
+            <summary>
+            Category's name
+            </summary>
+        </member>
+        <member name="T:LojaDemo.Dto.Category.GetAllCategoryResponse">
+            <summary>
+            GetAllCategory's response
+            </summary>
+        </member>
+        <member name="P:LojaDemo.Dto.Category.GetAllCategoryResponse.ListOfCategoryItem">
+            <summary>
+            List of category item
+            </summary>
+        </member>
         <member name="T:LojaDemo.Dto.User.LoginRequest">
             <summary>
             The object to request login on application

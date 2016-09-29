@@ -47,7 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryApplication\CategoryApplicationService.cs" />
+    <Compile Include="CategoryApplication\ICategoryApplicationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ICategoryRepository.cs" />
     <Compile Include="Repository\IUserRepository.cs" />
     <Compile Include="UserApplication\IUserApplicationService.cs" />
     <Compile Include="UserApplication\UserApplicationService.cs" />
